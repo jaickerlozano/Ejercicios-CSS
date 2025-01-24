@@ -1,0 +1,263 @@
+.enunciado p {
+    width: 800px;
+}
+
+/* Ejercicio1 */
+div.ejercicio1 {
+    width: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+div.ejercicio1>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+}
+
+/* Ejercicio 2 */
+div.ejercicio2 {
+    width: 450px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+}
+
+div.ejercicio2>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio2>div.principal {
+    grid-column: 1 / 4;
+    /* grid-column: 1 / span 3; cuando utilizo el span estoy indicando que se extienda 3 columnas */
+    /* Si no utilizo el span, debo indicar el número de la última columna */
+}
+
+/* Ejercicio 3 */
+div.ejercicio3 {
+    display: grid;
+    grid-template-columns: 100px 150px 150px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+div.ejercicio3>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio3>div.header {
+    grid-column: 1 / span 3;
+}
+
+div.ejercicio3>div.sidebar {
+    grid-row: 2 / span 2;
+}
+
+div.ejercicio4 {
+    display:grid;
+    grid-template-columns: 100px 150px 150px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+div.ejercicio4>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio4>div:first-child {
+    grid-area: 1 / span 3;
+}
+
+div.ejercicio4>div:nth-of-type(2) {
+    grid-area: 2 / 1 / span 2 / span 1;
+    /* Lo anterior significa que el elemento se extiende desde la fila 2 hasta la fila 3 y desde la columna 1 hasta la columna 2 */
+    /* 2 -> fila 2
+       1 -> columna 1
+       span 2 -> se extiende 2 filas
+       span 1 -> se extiende 1 columna */
+}
+
+div.ejercicio5 {
+    width: 450px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+div.ejercicio5>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio5>div.header {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+div.ejercicio5>div.sidebar {
+    grid-area: 1 / 4 / 2 span / 1 span;
+}
+
+div.ejercicio6 {
+    width: 450px;
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+        "celda1 celda1 celda1 celda2 celda2 celda2"
+        "celda3 celda3 celda4 celda4 celda4 celda4"
+        "celda5 celda5 celda5 celda5 celda5 celda5";
+    gap: 1px;
+}
+
+div.ejercicio6>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio6>div.celda1 {
+    grid-area: celda1;
+}
+
+div.ejercicio6>div.celda2 {
+    grid-area: celda2;
+}
+
+div.ejercicio6>div.celda3 {
+    grid-area: celda3;
+}
+
+div.ejercicio6>div.celda4 {
+    grid-area: celda4;
+}
+
+div.ejercicio6>div.celda5 {
+    grid-area: celda5;
+}
+
+div.ejercicio7 {
+    width: 450px;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1px;
+}
+
+div.ejercicio7>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio7>div.celda1 {
+    background-color: #9C5E11;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+div.ejercicio7>div.celda2 {
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+
+div.ejercicio7>div.celda3 {
+    grid-area: 2 / 2 / span 1 / span 1;
+    text-align: left;
+}
+
+div.ejercicio7>div.celda4 {
+    grid-area: 3 / 1 / span 1 / span 2;
+    background-color: #4F5151;
+}
+
+div.ejercicio8 {
+    width: 450px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+div.ejercicio8>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio8>div.celda1 {
+    order: 1;
+}
+
+div.ejercicio9 {
+    width: 450px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+    grid-auto-flow: column; /* Indica que los elementos se colocarán en columnas */
+}
+
+div.ejercicio9>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio10 {
+    width: 450px;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+div.ejercicio10>div {
+    background-color: #5F717D;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+}
+
+div.ejercicio10>div.celda4 {
+    grid-area: 2 / 2 / span 2 / span 1;
+}
+
+div.gridInterno {
+    background-color: white;
+    display: grid;
+    gap: 1px;
+}
+
+div.gridInterno>div {
+    background-color: #D5D5F2;
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+div.gridInterno>div:first-child {
+    grid-area: 1 / 1 / span 1 / span 2;
+}
