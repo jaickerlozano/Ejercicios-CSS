@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schoolbell&display=swap');
+.schoolbell-regular {
+  font-family: "Schoolbell", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?1zb67d');
+  src:  url('../fonts/icomoon.eot?1zb67d#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?1zb67d') format('truetype'),
+    url('../fonts/icomoon.woff?1zb67d') format('woff'),
+    url('../fonts/icomoon.svg?1zb67d#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e900";
+}
+
+/* Ejemplo 1 */
+
+ul.ejemplo1 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  list-style-type: none;
+  width: 300px;
+  color: #363636;
+}
+
+ul.ejemplo1 li {
+  padding: 10px 20px;
+}
+
+ul.ejemplo1 li+li {
+  border-top: 1px solid #d4d4d4
+}
+
+ul.ejemplo1 li a {
+  text-decoration: none;
+  color: #363636;
+}
+
+/* Ejemplo 2 */
+ul.ejemplo2 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  list-style-type: none;
+  width: 280px;
+  color: #363636;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+ul.ejemplo2 li a {
+  text-decoration: none;
+  color: #363636;
+  display: block;
+  padding: 10px 20px;
+}
+
+ul.ejemplo2 li+li {
+  border-top: 1px solid #d4d4d4;
+}
+
+ul.ejemplo2 li a:hover {
+  background-color: #3579F6;
+  color: white
+}
+
+ul.ejemplo2 li.active a {
+  background-color: #3579F6;
+  color: white;
+}
+
+/* Ejemplo 3 */
+
+ul.ejemplo3 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  list-style-type: none;
+  width: 280px;
+  color: #363636;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+ul.ejemplo3 li {
+  position: relative;
+}
+
+ul.ejemplo3 li a {
+  text-decoration: none;
+  color: #363636;
+  display: block;
+  padding: 10px 20px;
+}
+
+ul.ejemplo3 li:hover a {
+  background-color: #3579F6;
+  color: white;
+}
+
+ul.ejemplo3 li a span {
+  position: absolute;
+  right: 15px;
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #3579F6;
+  font-size: 8px;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+}
+
+ul.ejemplo3 li:hover a span {
+  background-color: white;
+  color: #3579F6;
+}
+
+ul.ejemplo3 li+li {
+  border-top: 1px solid #d4d4d4
+}
+
+/* Ejemplo 4 */
+
+section {
+  display: flex;
+  width: 600px;
+  gap: 10px;
+}
+
+ul.ejemplo4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 280px;
+  color: #363636;
+  list-style: none;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  overflow: hidden;
+  max-width: max-content;
+  list-style-image: url('../img/icons8-diabetes-16.png');
+}
+
+ul.ejemplo4 li a {
+  text-decoration: none;
+  color: #363636;
+  display: block;
+  padding: 10px 10px;
+}
+
+ul.ejemplo4.lista2 {
+  list-style-image: url('../img/icons8-ipad-mini-26.png');
+}
+
+ul.ejemplo4.lista3 {
+  list-style-image: url('../img/icons8-multiple-devices-24.png');
+}
+
+/* Ejemplo 5 */
+
+ul.ejemplo5 {
+  list-style: none;
+  counter-reset: step-counter;
+  padding: 0;
+  width: 300px;
+}
+
+ul.ejemplo5 li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  background-color: #363636;
+  color: white;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px 0 0;
+}
+
+ul.ejemplo5 li {
+  padding: 5px 10px;
+  color: #363636;
+}
+
+ul.ejemplo5 li+li {
+  border-top: 1px solid #d4d4d4;
+}
+
+/* Ejemplo 6 */
+
+ul.ejemplo6 {
+  width: 300px;
+  list-style-position: inside;
+  padding: 0 0 0 10px;
+}
+
+ul.ejemplo6 li {
+  font-family: "Schoolbell", serif;
+  padding: 2px;
+}
+
+ul.ejemplo6 li:not(:last-child) {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/* iconografía de github aplicado en el marker */
+ul.ejemplo6 li::marker {
+  font-family: 'icomoon';
+  color: #6d26a0;
+  content: "\e900";
+}
+
+ul.ejemplo6 li::before {
+  content: '';
+  margin: 3px;
+}
+
+/* Lista de iconos para colocar dentro del marker
+
+.icon-github:before {
+  content: "\e900";
+}
+.icon-linux:before {
+  content: "\e901";
+}
+.icon-wordpress:before {
+  content: "\e902";
+  color: #21759b;
+}
+.icon-rust:before {
+  content: "\e903";
+}
+.icon-nodejs:before {
+  content: "\e904";
+  color: #393;
+}
+.icon-java:before {
+  content: "\e905";
+  color: #007396;
+}
+.icon-vue:before {
+  content: "\e906";
+  color: #4fc08d;
+}
+.icon-angular:before {
+  content: "\e907";
+  color: #dd0031;
+}
+.icon-react:before {
+  content: "\e908";
+  color: #61dafb;
+}
+.icon-mysql:before {
+  content: "\e909";
+  color: #4479a1;
+}
+.icon-python:before {
+  content: "\e90a";
+  color: #3776ab;
+}
+.icon-django:before {
+  content: "\e90b";
+}
+.icon-javascript:before {
+  content: "\e90c";
+  color: #f7df1e;
+}
+.icon-css3:before {
+  content: "\e90d";
+  color: #1572b6;
+}
+.icon-html5:before {
+  content: "\e90e";
+  color: #e34f26;
+}
+
+*/
