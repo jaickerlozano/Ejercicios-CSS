@@ -1,0 +1,113 @@
+section {
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+div div {
+  width: fit-content;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 65px;
+  font-weight: 600;
+  padding: 35px 16px;
+  margin-bottom: 20px;
+}
+
+.ejercicio1 div {
+  color: white;
+  background-color: #6CFAFC;
+  text-shadow: 1px 2px 2px #8d8c8c;
+}
+
+.ejercicio2 div {
+  color: white;
+  background-color: #FFF3CD;
+  text-shadow: 3px 2px 1px #adadad;
+}
+
+.ejercicio3 div {
+  color: white;
+  background-color: #6CFAFC;
+  text-shadow: -3px 3px #60E2E2, -8px 8px #57CBCB, -13px 13px #4FB9BA;
+}
+
+.ejercicio4 div {
+  color: white;
+  background-color: #FFF3CD;
+  text-shadow: 0px 2px 3px rgb(119, 115, 115), 0px 8px 2px rgba(39, 35, 35, 0.15), 0px 12px 2px rgba(138, 138, 138, 0.5);
+}
+
+.ejercicio5 div {
+  color: #151515;
+  background-color: #222222;
+  text-shadow: 1px 1px 2px #3b3b3b;
+}
+
+.ejercicio6 div {
+  width: fit-content;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 30px 50px;
+  margin-bottom: 20px;
+  color: #a1a1a1;
+  background-color: #CED7EF;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #bbbbbb, -2px -2px 5px #bbbbbb;
+}
+
+.ejercicio7 div {
+  width: fit-content;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 35px 90px;
+  margin-bottom: 20px;
+  color: #a1a1a1;
+  background-color: #CED7EF;
+  box-shadow: 3px 3px 5px #acacac inset, -3px -3px 5px #acacac inset;
+}
+
+.ejercicio8 div {
+  width: fit-content;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 45px 30px;
+  margin-bottom: 20px;
+  color: #8d8d8d;
+  background-color: #CED7EF;
+  box-shadow: 4px 4px 5px #858585;
+}
+
+.ejercicio9 div {
+  width: fit-content;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 45px 30px;
+  margin-bottom: 20px;
+  color: #8d8d8d;
+  background-color: #CED7EF;
+  box-shadow: -4px -4px 5px #858585;
+}
+
+.ejercicio10 div {
+  width: fit-content;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  padding: 30px 55px;
+  margin-bottom: 20px;
+  color: #8d8d8d;
+  background-color: #CED7EF;
+  box-shadow: 12px 6px #858585;
+}
