@@ -1,0 +1,51 @@
+/* media queries para teléfonos*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 16px;
+  margin: 0px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav>ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+}
+
+nav>ul li {
+  width: 100%;
+}
+
+nav>ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  background-color: #31A6E6;
+  font-weight: 700;
+  color: white;
+}
+
+.dropdown {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+nav>ul>li a:hover {
+  background-color: black;
+}
+
+nav>ul>li:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+}
