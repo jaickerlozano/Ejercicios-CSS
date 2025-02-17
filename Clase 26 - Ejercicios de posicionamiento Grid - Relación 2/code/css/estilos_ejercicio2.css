@@ -1,329 +1,280 @@
-:root {
-    --background-color: #FFC600;
-    --background-color-articles: white;
-    --background-image: url("../img/topography.svg"), linear-gradient(to right, #DE4D6E, #7E49BE);
-    --margin-bottom: 25px;
-    --margin-bottom-responsive: 1em;
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    background-image: var(--background-image);
-    padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-image: url("../img/topography.svg"), linear-gradient(to right, #DE4D6E, #7E49BE);
+  padding: 30px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 200px);
-    grid-template-areas: 
-        "hero hero cta1"
-        "hero hero cta2";
-    gap: 15px;
-    margin-bottom: var(--margin-bottom);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  grid-template-areas: "hero hero cta1" "hero hero cta2";
+  gap: 15px;
+  margin-bottom: 25px;
+}
+header .hero {
+  grid-area: hero;
+  background-image: url("../img/taco.jpg");
+  background-size: cover;
+  background-position: 50% 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+header .hero h1 {
+  background-color: #FFC600;
+  padding: 10px 5px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+header .hero p {
+  background-color: #FFC600;
+  padding: 10px 5px;
+  font-weight: bold;
+  margin: 10px 0 50px 0;
+}
+header .cta1, header .cta2 {
+  background-color: #FFC600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 30px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+header .cta1 .cta__price, header .cta2 .cta__price {
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+header .cta1 .cta__name, header .cta2 .cta__name {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}
+header .cta1:hover, header .cta2:hover {
+  background-color: black;
+  color: #FFC600;
+}
+header .cta1 {
+  grid-area: cta1;
+}
+header .cta2 {
+  grid-area: cta2;
 }
 
-.hero {
+nav {
+  margin-bottom: 25px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  flex: 1;
+}
+nav ul li a {
+  display: block;
+  background-color: #FFC600;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+nav ul li a:hover {
+  background-color: black;
+  color: #FFC600;
+}
+
+.destacados {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.destacados article {
+  background-color: white;
+  text-align: center;
+  padding: 10px 5px;
+  width: 100%;
+  height: auto;
+}
+.destacados article .description {
+  color: #767676;
+  font-size: 14px;
+  font-weight: bold;
+}
+.destacados article p:first-child {
+  font-size: 50px;
+  margin: 0;
+}
+
+.destacado {
+  background-color: white;
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.destacado img {
+  width: 400px;
+  height: auto;
+}
+.destacado .destacado__info {
+  font-weight: bold;
+  max-width: 400px;
+}
+.destacado .destacado__info a {
+  background-color: #FFC600;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  font-weight: normal;
+}
+.destacado .destacado__info a:hover {
+  background-color: black;
+  color: #FFC600;
+}
+
+.instagram h2 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+.instagram h2::before {
+  content: "";
+  height: 10px;
+  background-image: linear-gradient(to right, transparent, #FFC600);
+}
+.instagram h2::after {
+  content: "";
+  height: 10px;
+  background-image: linear-gradient(to left, transparent, #FFC600);
+}
+.instagram h2 div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+.instagram h2 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (width <= 480px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+    margin: 0;
+  }
+  * {
+    box-sizing: content-box;
+  }
+  header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas: "hero hero" "cta1 cta2";
+    gap: 5px;
+    margin-bottom: 1em;
+    justify-items: center;
+    align-items: center;
+  }
+  header .hero {
+    width: 70%;
     grid-area: hero;
-    background-image: url("../img/taco.jpg");
     background-size: cover;
     background-position: 50% 100%;
     display: flex;
     align-items: start;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding: 50px;
-}
-
-.hero h1 {
-    background-color: var(--background-color, white);
-    padding: 10px 5px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.hero p {
-    background-color: var(--background-color, white);
-    padding: 10px 5px;
-    font-weight: bold;
-    margin: 10px 0 50px 0;
-}
-
-.cta1 {
-    grid-area: cta1;
-}
-
-.cta2 {
-    grid-area: cta2;
-}
-
-.cta1, .cta2 {
-    background-color: var(--background-color, white);
+    padding: 10px;
+  }
+  header .cta1, header .cta2 {
+    width: 70%;
+    height: 60%;
+    background-color: #FFC600;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    font-size: 30px;
-    padding: 20px;
+    font-size: 1rem;
+    padding: 1rem;
     flex-wrap: wrap;
-}
-
-.cta__price {
-    font-size: 50px;
+  }
+  header .cta1 .cta__price, header .cta2 .cta__price {
+    font-size: 2em;
     width: 100%;
     text-align: center;
     margin: 0;
-}
-
-.cta__name {
-    font-size: 18px;
+  }
+  header .cta1 .cta__name, header .cta2 .cta__name {
+    font-size: 1em;
     width: 100%;
     text-align: center;
     margin: 0;
     font-weight: bold;
-}
-
-.cta1:hover, .cta2:hover {
-    background-color: black;
-    color: var(--background-color, white);
-}
-
-nav {
-    margin-bottom: var(--margin-bottom);
-}
-
-nav ul {
+  }
+  nav {
+    margin-bottom: 1em;
+  }
+  nav ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
-    gap: 10px;
+    gap: 5px;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
+    flex-wrap: wrap;
+  }
+  nav ul li {
     flex: 1;
-}
-
-nav ul li a {
+  }
+  nav ul li a {
     display: block;
-    background-color: var(--background-color, white);
+    background-color: #FFC600;
     text-decoration: none;
     color: black;
     font-weight: bold;
     text-align: center;
     padding: 10px;
-}
-
-nav ul li a:hover {
-    background-color: black;
-    color: var(--background-color, white);
-}
-
-.destacados {
+  }
+  .destacados {
     display: flex;
     gap: 10px;
-    margin-bottom: var(--margin-bottom);
-}
-
-.destacados article {
-    background-color: var(--background-color-articles);
-    text-align: center;
-    padding: 10px 5px;
-    width: 100%;
+    margin-bottom: 1em;
+  }
+  .destacado {
+    padding: 1em;
+  }
+  .destacado img {
+    width: 50%;
     height: auto;
-}
-.destacados article p:first-child {
-    font-size: 50px;
-    margin: 0;
-}
-
-.description {
-    color: #767676;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.destacado {
-    background-color: var(--background-color-articles);
-    display: flex;
-    padding: 50px;
-    align-items: center;
-    margin-bottom: var(--margin-bottom);
-}
-
-.destacado img {
-    width: 400px;
-    height: auto;
-}
-
-.destacado__info {
-    font-weight: bold;
-    max-width: 400px;
-}
-
-.destacado__info a {
-    background-color: var(--background-color, white);
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    font-weight: normal;
-}
-
-.destacado__info a:hover {
-    background-color: black;
-    color: var(--background-color, white);
-}
-
-.instagram h2 {
-    text-align: center;
+  }
+  .instagram div {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 20px;
-}
-
-.instagram h2::before {
-    content: "";
-    height: 10px;
-    background-image: linear-gradient(to right, transparent, var(--background-color, white));
-}
-
-.instagram h2::after {
-    content: "";
-    height: 10px;
-    background-image: linear-gradient(to left, transparent, var(--background-color, white));
-}
-
-.instagram div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
     gap: 10px;
-}
-
-.instagram img {
-    width: 100%;
-    object-fit: cover;
-}
-
-@media (width <= 480px) {
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        padding: 10px;
-        margin: 0;
-    }
-
-    * {
-        box-sizing: content-box;
-    }
-
-    header {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 200px);
-        grid-template-areas: 
-            "hero hero"
-            "cta1 cta2";
-        gap: 5px;
-        margin-bottom: var(--margin-bottom-responsive);
-        justify-items: center;
-        align-items: center;
-    }
-
-    .hero {
-        width: 70%;
-        grid-area: hero;
-        background-size: cover;
-        background-position: 50% 100%;
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .cta1, .cta2 {
-        width: 70%;
-        height: 60%;
-        background-color: var(--background-color, white);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        font-size: 1rem;
-        padding: 1rem;
-        flex-wrap: wrap;
-    }
-
-    .cta__price {
-        font-size: 2em;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-    }
-    
-    .cta__name {
-        font-size: 1em;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        font-weight: bold;
-    }
-
-    nav ul {
-        display: flex;
-        list-style: none;
-        justify-content: space-between;
-        gap: 5px;
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-    }
-
-    nav {
-        margin-bottom: var(--margin-bottom-responsive);
-    }
-    
-    nav ul li {
-        flex: 1;
-    }
-    
-    nav ul li a {
-        display: block;
-        background-color: var(--background-color, white);
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .destacados {
-        display: flex;
-        gap: 10px;
-        margin-bottom: var(--margin-bottom-responsive);
-    }
-
-    .destacado img {
-        width: 50%;
-        height: auto;
-    }
-
-    .destacado {
-        padding: 1em;
-    }
-
-    .instagram div {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-        gap: 10px;
-    }
-}
+  }
+}/*# sourceMappingURL=estilos_ejercicio2.css.map */

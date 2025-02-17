@@ -1,0 +1,93 @@
+/*
+Grilla de imágenes
+repeat(auto-fit, minmax(200px, 1fr))
+linear-gradient(to var(--direction, left), var(--yellow), transparent)
+  <p>🌮</p>
+  <p>🍺</p>
+  <p>🍷</p>
+  <p>🎵</p>
+  <img src="https://source.unsplash.com/random/201x201" alt="">
+  https://unsplash.com/es -> página para descargar fotos gratis 
+*/
+
+//Variables
+$borde:8px solid rgba(0, 0, 0, 0.1);
+$fondo-mostaza: #F6C844; 
+$fondo-azul: #6F94E6;
+$fondo-rojo-tomate: #ED6D52;
+$fondo-verde-claro: #AFF8A2;
+$fondo-verde: #A5CC4F;
+
+.bigGrid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    background-image: url("../img/topography.svg"), linear-gradient(to right, #DE4D6E, #7E49BE);
+    padding: 10px;
+  }
+  
+  [class^="box-"] {
+    background-color: $fondo-mostaza;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: $borde;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-6 {
+    background-color: $fondo-azul;
+    grid-column: 1 / 6 span;
+    grid-row: 2 / 1 span;
+  }
+  
+  .box-8 {
+    background-color: $fondo-rojo-tomate;
+    grid-column: span 2;
+  }
+  
+  .box-9 {
+    background-color: $fondo-verde-claro;
+    grid-row: span 2;
+  }
+  
+  .box-12 {
+    background-color: $fondo-azul;
+    grid-column: 1 / 6 span;
+    grid-row: 3 / 1 span;
+  }
+  
+  .box-16 {
+    background-color: $fondo-rojo-tomate;
+    grid-column: span 2;
+  }
+  
+  .box-18 {
+    background-color: $fondo-verde;
+    grid-column: 5 / span 6;
+    grid-row: 4 / span 2;
+  }
+  
+  .box-24 {
+    background-color: $fondo-rojo-tomate;
+    grid-column: 2 / span 2;
+  }
+  
+  .box-30 {
+    background-color: $fondo-azul;
+    grid-column: 6 span;
+  }
+  
+  .box-27 {
+    background-color: $fondo-verde-claro;
+    grid-row: span 2;
+  }
+  
+  .box-32 {
+    background-color: $fondo-rojo-tomate;
+    grid-column: span 2;
+  }
